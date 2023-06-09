@@ -1,0 +1,38 @@
+{{>_navbar}}
+
+{{>_banner}}
+
+<main class="main-home">
+
+    <div class="services section" id="services">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Com o <em>TaskApp</em> sua produtividade
+                            <span>Aumenta</span> com muitos benefícios!
+                        </h2>
+                        <div class="line-dec"></div>
+                        <p>Abaixo estão as tarefas em destaque.</p>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                    {{#each tarefas}}
+                    <div class="col">
+                        <div class="service-item">
+                            <div class="icon">
+                                <img src="/images/services-02.jpg" alt="data analysis" class="templatemo-feature">
+                            </div>
+                            <h4>{{nome}}</h4>
+                            <p>{{descricao}}</p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+{{>_footer}}

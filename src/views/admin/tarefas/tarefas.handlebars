@@ -1,12 +1,20 @@
+{{>_navbar}}
+
 <main>
     <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
-            <h2>Lista de Tarefas</h2>
-            <hr>
+
+            <div class="section-heading">
+                <h2><em>TaskApp</em><br> Veja todos aqui!
+                </h2>
+                <div class="line-dec"></div>
+                <p>Abaixo estão as tarefas.</p>
+            </div>
+
             <a href=" /rota_tarefas/tarefas/add">
                 <button class="btn btn-success">Nova Tarefa</button></a>
             {{#each tarefas}}
-            <div class="card mt-4">
+            <div class="card mt-4 service-item">
                 <div class="card-body">
                     <h4><b>ID:</b>{{_id}}</h4>
                     <small><b>Nome:</b> {{nome}}</small><br>
@@ -16,10 +24,12 @@
 
                     <!--botão para deletar tarefas -->
                     <a href=" /rota_tarefas/deletar_tarefas/{{_id}}">
-                    <button class="btn btn-danger mt-3">Deletar tarefas</button></a>
+                        <button class="btn btn-danger mt-3">Deletar tarefas</button></a>
                 </div>
             </div>
             {{/each}}
         </div>
     </div>
 </main>
+
+{{>_footer}}

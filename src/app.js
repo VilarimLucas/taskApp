@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const path =require('path');
 const app = express();
 
+const admin = require('./controller/admin');
 const rota_tarefas =require('./controller/tarefasController');
 //Configurações
 
@@ -38,6 +39,9 @@ app.use('/fonts', express.static('public/fonts'));
 
 //Remanejando Rotas de tarefas
 app.use('/rota_tarefas', rota_tarefas);
+
+app.use('/', admin);
+
 
 // Outros
 const PORT = 8081;

@@ -1,7 +1,15 @@
+{{>_navbar}}
 <main>
     <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
-            <h3> Editar Tarefas: </h3>
+            <div class="section-heading">
+
+                <h2><em>TaskApp</em><br> edite aqui!
+                </h2>
+                <div class="line-dec"></div>
+                <p>Abaixo está a tarefa que pode ser alterada.</p>
+            </div>
+
             <div class="card">
                 <div class="card-body">
                     {{#if tarefa}}
@@ -20,3 +28,4 @@
         </div>
     </div>
 </main>
+{{>_footer}}

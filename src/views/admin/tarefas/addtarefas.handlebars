@@ -1,7 +1,14 @@
+{{>_navbar}}
 <main>
     <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
-            <h3> Nova Tarefa: </h3>
+            <div class="section-heading">
+
+                <h2><em>TaskApp</em><br> adicione aqui!
+                </h2>
+                <div class="line-dec"></div>
+                <p>Abaixo estão os campos que podem ser preenchidos para cadastro de Tarefa.</p>
+            </div>
             <div class="card">
                 <div class="card-body">
                     <form action="/rota_tarefas/tarefas/nova" method="POST">
@@ -16,3 +23,5 @@
         </div>
     </div>
 </main>
+
+{{>_footer}}

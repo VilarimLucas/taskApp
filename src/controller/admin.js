@@ -1,8 +1,18 @@
 const express = require("express");
 const router = express.Router();
 
+const mongoose = require("mongoose");
+//vamos carregar nosso modelo 
+require("../models/tarefas");
+const Tarefas = mongoose.model("tarefas");
+
+
+// ROTAS 
+
 router.get('/',(req, res)=>{
-    res.send("Página Principal Admin");
+    Tarefas.find().lean().then((tarefas) => {
+        res.render("home", { tarefas: tarefas });
+    });
 });
 
 router.get('/posts',(req,res)=>{
